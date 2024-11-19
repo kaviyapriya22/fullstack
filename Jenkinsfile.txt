@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
   agent any
   stages{
     stage('version'){
@@ -6,15 +6,15 @@ pipeline{
             echo 'Stage Version'
       }
     }
-  stages{
+
     stage('hello'){
       steps{
         echo 'Stage Hello'
-        sh javac HelloWorld.java
-        sh java HelloWorld
+        sh 'javac HelloWorld.java'
+        sh 'java HelloWorld'
   }
 }
 }
 }
-}
+
       
